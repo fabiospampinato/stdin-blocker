@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-const {describe} = require ( 'fava' );
-const delay = require ( 'promise-resolve-timeout' );
-const {default: Blocker} = require ( '../dist' );
+import {describe} from 'fava';
+import {setTimeout} from 'node:timers/promises';
+import Blocker from '../dist/index.js';
 
 /* MAIN */
 
@@ -15,39 +15,39 @@ describe ( 'Stdin Blocker', it => {
 
     Blocker.block ();
 
-    await delay ( 500 );
+    await setTimeout ( 500 );
 
     t.true ( Blocker.isBlocked () );
 
     Blocker.unblock ();
 
-    await delay ( 500 );
+    await setTimeout ( 500 );
 
     t.false ( Blocker.isBlocked () );
 
     Blocker.toggle ();
 
-    await delay ( 500 );
+    await setTimeout ( 500 );
 
     t.true ( Blocker.isBlocked () );
 
     Blocker.toggle ();
 
-    await delay ( 500 );
+    await setTimeout ( 500 );
 
     t.false ( Blocker.isBlocked () );
 
     Blocker.toggle ( true );
     Blocker.toggle ( true );
 
-    await delay ( 500 );
+    await setTimeout ( 500 );
 
     t.true ( Blocker.isBlocked () );
 
     Blocker.toggle ( false );
     Blocker.toggle ( false );
 
-    await delay ( 500 );
+    await setTimeout ( 500 );
 
     t.false ( Blocker.isBlocked () );
 

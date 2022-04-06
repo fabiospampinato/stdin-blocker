@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-import readline from 'readline';
+import readline from 'node:readline';
 
 /* MAIN */
 
@@ -24,7 +24,7 @@ class Blocker {
 
   /* API */
 
-  onKeypress = ( str: string, key: { ctrl?: boolean, name?: string } ): void => {
+  onKeypress = ( _: string, key: { ctrl?: boolean, name?: string } ): void => {
 
     if ( key.ctrl && key.name === 'c' ) {
 
