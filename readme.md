@@ -1,11 +1,11 @@
 # Stdin Blocker
 
-A tiny library for blocking stdin keypresses, except for ctrl+c. Useful while displaying animations.
+A tiny library for blocking stdin keypresses, except for Ctrl+C. Useful while displaying animations.
 
 ## Install
 
 ```sh
-npm install --save stdin-blocker
+npm install stdin-blocker
 ```
 
 ## Usage
