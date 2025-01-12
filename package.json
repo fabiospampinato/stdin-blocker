@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/stdin-blocker",
   "description": "A tiny library for blocking stdin keypresses, except for Ctrl+C. Useful while displaying animations.",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
